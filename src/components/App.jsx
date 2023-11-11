@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 
 
@@ -15,7 +15,6 @@ const Reviews = lazy(() => import('./Reviews/Reviews'));
 export const App = () => {
 
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path="/" element={ <Layout /> }>
                     <Route index element={<Home />} />
@@ -27,6 +26,5 @@ export const App = () => {
                     <Route path="*" element={<Home />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
     );
 };
